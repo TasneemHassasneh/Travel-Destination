@@ -4,10 +4,22 @@ header{
     margin-left: 25%;
     background-color: #F7D060;
     width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     
 }
 h1{
     text-align: center;
-    
     color: #617A55;
+}
+
+#home-a{
+    color: #617A55;
+    text-decoration: none;
+}
+
+#home-a:hover{
+    background-color: #617A55;
+    color: antiquewhite;
 }
