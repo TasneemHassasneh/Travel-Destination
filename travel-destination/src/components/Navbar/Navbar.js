@@ -1,16 +1,14 @@
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
 import React from "react";
-import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 import Link from "@mui/material/Link";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import GitHubIcon from "@mui/icons-material/GitHub";
-function Footer() {
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import logo from "../../assets/travel.png";
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+function Navbar() {
   return (
     <Box
-      py={{ md: 2, xs: 0 }}
       sx={{
         bgcolor: "#05103D",
         width: "100%",
@@ -24,13 +22,40 @@ function Footer() {
         direction="row"
         spacing={{ md: 50, xs: 10 }}
       >
-        <Stack>
-          <Typography color="white" fontFamily="cursive" variant="body1">
-            &copy; 2023 Tasneem Hassasneh
-          </Typography>
+        <Stack
+          direction="row"
+          spacing={2}
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Link
+            sx={{
+              textDecoration: "none",
+              color: "white",
+              cursor: "pointer",
+       
+            }}
+          >
+            <img alt="logo" src={logo} style={{ width: "40px" }} />
+          </Link>
+          <Link
+            sx={{
+              textDecoration: "none",
+              color: "white",
+              cursor: "pointer",
+              "&:hover": {
+                color: "blue",
+              },
+            }}
+          >
+            <Typography fontFamily="cursive" variant="body1">
+              Travel Destination
+            </Typography>
+          </Link>
         </Stack>
         <Stack direction="row" spacing={{ md: 10, xs: 1 }}>
           <Link
+          href="/"
             sx={{
               textDecoration: "none",
               color: "white",
@@ -44,7 +69,7 @@ function Footer() {
               },
             }}
           >
-            <FacebookOutlinedIcon />
+            <HomeOutlinedIcon />
             <Typography
               color="white"
               fontFamily="cursive"
@@ -56,10 +81,11 @@ function Footer() {
                 },
               }}
             >
-              Facebook
+              Home
             </Typography>
           </Link>
           <Link
+         
             sx={{
               textDecoration: "none",
               color: "white",
@@ -73,7 +99,7 @@ function Footer() {
               },
             }}
           >
-            <TwitterIcon />
+            <InfoOutlinedIcon />
             <Typography
               color="white"
               fontFamily="cursive"
@@ -85,36 +111,7 @@ function Footer() {
                 },
               }}
             >
-              Twitter
-            </Typography>
-          </Link>
-          <Link
-            sx={{
-              textDecoration: "none",
-              color: "white",
-              cursor: "pointer",
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
-              "&:hover": {
-                color: "blue",
-              },
-            }}
-          >
-            <GitHubIcon />
-            <Typography
-              color="white"
-              fontFamily="cursive"
-              variant="body2"
-              sx={{
-                pl: 1,
-                "&:hover": {
-                  color: "blue",
-                },
-              }}
-            >
-              GitHub
+              Details
             </Typography>
           </Link>
         </Stack>
@@ -123,4 +120,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default Navbar;

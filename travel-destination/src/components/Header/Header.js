@@ -9,7 +9,7 @@ function Header() {
     <Box
       sx={{
         width: "100%",
-        height: "80vh",
+        height: "95vh",
         background:"#020617B2",
         backgroundImage:"URL('https://images.pexels.com/photos/2031773/pexels-photo-2031773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
         backgroundSize:"100%",
